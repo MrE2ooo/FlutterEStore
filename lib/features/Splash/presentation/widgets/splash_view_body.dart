@@ -1,9 +1,11 @@
-
-
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
+import 'package:estore/core/utils/size_config.dart';
+import 'package:estore/features/on%20boarding/presentation/on_boardingview.dart';
 
+import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -20,14 +22,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(milliseconds: 600));
+    animationController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 600));
     fadingAnimation =
         Tween<double>(begin: .2, end: 1).animate(animationController!);
 
     animationController?.repeat(reverse: true);
 
-    //goToNextView();
+    goToNextView();
   }
 
   @override
@@ -38,20 +40,20 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    
-    return  Container(
+    SizeConfig().init(context);
+    return Container(
       child: Column(
         children: [
           const Spacer(),
           FadeTransition(
             opacity: fadingAnimation!,
-            child:const Text(
+            child: const Text(
               'Fruit Market',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 51,
                 fontWeight: FontWeight.bold,
-                color:  Color(0xffffffff),
+                color: Color(0xffffffff),
               ),
             ),
           ),
@@ -62,9 +64,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
   }
 
-  /*void goToNextView() {
-    Future.delayed(Duration(seconds: 3), () {
-      Get.to(() => OnBoardingView(), transition: Transition.fade);
+  void goToNextView() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const OnBoardingview(), transition: Transition.fade);
     });
-  }*/
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:estore/core/constants.dart';
 import 'package:estore/features/Splash/presentation/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,7 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Color(0xff69a03a),
+      backgroundColor: kMainColor,
       body: SplashViewBody(),
     );
   }
