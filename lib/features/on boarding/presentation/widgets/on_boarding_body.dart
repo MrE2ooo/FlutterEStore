@@ -1,8 +1,10 @@
 import 'package:estore/core/utils/size_config.dart';
 import 'package:estore/core/widgets/custom_buttons.dart';
+import 'package:estore/features/Auth/presentation/pages/login/login_view.dart';
 import 'package:estore/features/on%20boarding/presentation/widgets/custom_indicator.dart';
 import 'package:estore/features/on%20boarding/presentation/widgets/custom_page_view.dart';
 import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -86,7 +88,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   curve: Curves.easeIn,
                 );
               } else {
-                Get.to(() => (), transition: Transition.rightToLeft, duration: const Duration(milliseconds: 500)); // Replace with your target page widget
+                Get.to(() =>const LoginView(), transition: Transition.rightToLeft, duration: const Duration(milliseconds: 500)); // Replace with your target page widget
               }
             },
             text: pageController!.hasClients
