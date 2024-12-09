@@ -2,6 +2,7 @@ import 'package:estore/core/constants.dart';
 import 'package:estore/core/utils/size_config.dart';
 import 'package:estore/core/widgets/custom_buttons.dart';
 import 'package:estore/core/widgets/space_widget.dart';
+import 'package:estore/features/Auth/presentation/pages/complete_information/complete_information_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_icon_class/font_awesome_icon_class.dart';
 
@@ -55,7 +56,7 @@ class LoginViewBody extends StatelessWidget {
               flex: 1,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
-                child: CustomButtonWithIcon(
+                child: CustomButtonWithIcon2(
                   color: Color(0xFFdb3236),
                   iconData: FontAwesomeIcons.googlePlusG,
                   text: 'Log in with ',
@@ -68,7 +69,7 @@ class LoginViewBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: CustomButtonWithIcon(
                   onTap: () {
-                    Get.to(() => (),
+                    Get.to(() => const CompleteInformationView(),
                         duration: const Duration(milliseconds: 500),
                         transition: Transition.rightToLeft);
                   },
