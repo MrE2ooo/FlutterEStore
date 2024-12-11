@@ -58,7 +58,7 @@ class LoginViewBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: CustomButtonWithIcon2(
                   color: Color(0xFFdb3236),
-                  iconData: FontAwesomeIcons.googlePlusG,
+                  iconData: FontAwesomeIcons.google,
                   text: 'Log in with ',
                 ),
               ),
