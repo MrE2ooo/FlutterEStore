@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:estore/core/utils/size_config.dart';
 import 'package:estore/features/on%20boarding/presentation/on_boardingview.dart';

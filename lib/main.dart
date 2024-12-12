@@ -16,9 +16,7 @@ void main() async{
           appId: "1:421881417478:web:859018d9b58f0453945887"
          )
   );
-  runApp(const FruitMarket(
-    
-  ));
+  runApp(const FruitMarket());
 }
 
 class FruitMarket extends StatelessWidget {
