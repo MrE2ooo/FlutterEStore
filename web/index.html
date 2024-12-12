@@ -12,7 +12,7 @@
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
     This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
+    the --base-href argument provided to flutter build.
   -->
   <base href="$FLUTTER_BASE_HREF">
 
@@ -31,6 +31,27 @@
 
   <title>estore</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Import Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js"></script>
+  <!-- Add other Firebase SDKs that you need -->
+
+  <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyCOvfG0fclI50abEpFyq5E5nUbsfSVLEKs",
+          authDomain: "estore-dac3d.firebaseapp.com",
+          projectId: "estore-dac3d",
+          storageBucket: "estore-dac3d.appspot.com",
+          messagingSenderId: "421881417478",
+          appId: "1:421881417478:web:859018d9b58f0453945887"
+      };
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>

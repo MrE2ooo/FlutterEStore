@@ -7,13 +7,13 @@ class CustomTextFormField extends StatelessWidget {
   final ValueSetter? onChanged;
   final int? maxLines;
   const CustomTextFormField({
-    Key? key,
+    super.key,
     @required this.inputType,
     this.suffexIcon,
     @required this.onSaved,
     this.onChanged,
     this.maxLines,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -26,7 +26,7 @@ class CustomTextFormField extends StatelessWidget {
         fillColor: Colors.transparent,
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color(0xFFCCCCCC),
             )),
     

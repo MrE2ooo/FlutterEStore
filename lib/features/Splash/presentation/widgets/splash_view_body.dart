@@ -8,7 +8,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 class SplashViewBody extends StatefulWidget {
-  const SplashViewBody({Key? key}) : super(key: key);
+  const SplashViewBody({super.key});
 
   @override
   _SplashViewBodyState createState() => _SplashViewBodyState();
